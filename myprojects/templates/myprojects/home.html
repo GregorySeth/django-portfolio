@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<link  rel="stylesheet" href="jquery_ui/jquery-ui.css">
+
+		<link rel="stylesheet" href="css/styling.css">
+
+		<title>Grzegorz Gieda</title>
+
+	</head>
+
+	<body>
+
+		<!-- GÓRNY NAVBAR -->
+
+		<nav id="navbar_custom" class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+			<div id="logo" class="navbar-brand d-none d-sm-block">Grzegorz Gieda</div>
+
+			<div id="logo_sm" class="navbar-brand d-block d-sm-none">Grzegorz Gieda</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  				<ul class="navbar-nav mr-auto w-100 justify-content-end">
+
+  					<li class="nav-item">
+
+  						<a id="start" class="nav-link aktywny">Start</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="o_mnie" class="nav-link">O mnie</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="umiejetnosci" class="nav-link">Umiejętności</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="portfolio" class="nav-link">Portfolio</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="kontakt" class="nav-link">Kontakt</a>
+
+  					</li>
+
+  				</ul>
+
+  			</div>
+
+		</nav>
+
+    <!-- TREŚĆ STRONY (PORTFOLIO)-->
+		{% for project in projects.all %}
+
+		<div class="">
+			<img src="{{ project.image.url }}">
+			<p>{{ project.summary }}</p>
+		</div>
+
+		{% endfor %}
+
+		<!-- BOTTOM BAR -->
+
+		<div class="container-fluid" id="bottom_bar">
+
+			<div class="row">
+
+				<div class="col-10 col-sm-11 d-none d-sm-block" id="copyright">
+
+					<div>Copyright&copy; 2018 Grzegorz Gieda</div>
+
+				</div>
+
+				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Copyright&copy; 2018</div>
+
+				<div class="col-2 col-sm-1">
+
+					<a href="https://github.com/GregorySeth" target="_blank"><img src="img/logo/github_log.png" id="gitlogo"></a>
+
+				</div>
+
+				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Grzegorz Gieda</div>
+
+			</div>
+
+		</div>
+
+		<!-- Optional JavaScript -->
+
+
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script src="jquery_ui/jquery-ui.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+		<script src="js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="script.js"></script>
+
+	</body>
+
+</html>
