@@ -2,372 +2,257 @@
 
 <html lang="en">
 
-	<head>
+<head>
+	{% load staticfiles %}
+	<meta charset="utf-8">
 
-		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
 
-		<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link  rel="stylesheet" href="{% static 'jquery_ui/jquery-ui.css' %}">
 
-		<link  rel="stylesheet" href="jquery_ui/jquery-ui.css">
+	<link rel="stylesheet" href="{% static 'css/styling.css' %}">
 
-		<link rel="stylesheet" href="css/styling.css">
+	<title>Umiejętności</title>
 
-		<title>Grzegorz Gieda</title>
+</head>
 
-	</head>
+<body>
 
-	<body>
+	<!-- GÓRNY NAVBAR -->
+	<nav id="navbar_custom" class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<div id="logo" class="navbar-brand d-none d-sm-block">Grzegorz Gieda</div>
+		<div id="logo_sm" class="navbar-brand d-block d-sm-none">Grzegorz Gieda</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto w-100 justify-content-end">
+				<li class="nav-item">
+					<a id="start" class="nav-link" href="{% url 'home' %}">Start</a>
+				</li>
+				<li class="nav-item">
+					<a id="o_mnie" class="nav-link" href="{% url 'about' %}">O mnie</a>
+				</li>
+				<li class="nav-item">
+					<a id="umiejetnosci" class="nav-link aktywny" href="{% url 'skills' %}">Umiejętności</a>
+				</li>
+				<li class="nav-item">
+					<a id="portfolio" class="nav-link" href="{% url 'projects' %}">Projekty</a>
+				</li>
+				<li class="nav-item">
+					<a id="kontakt" class="nav-link" href="{% url 'blog' %}">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a id="kontakt" class="nav-link" href="{% url 'contact' %}">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-		<!-- GÓRNY NAVBAR -->
+	<!-- TREŚĆ STRONY (UMIEJĘTNOŚCI)-->
+	<div class="container-fluid content">
+		<div class="row d-flex justify-content-center">
 
-		<nav id="navbar_custom" class="navbar navbar-expand-lg navbar-dark fixed-top">
-
-			<div id="logo" class="navbar-brand d-none d-sm-block">Grzegorz Gieda</div>
-
-			<div id="logo_sm" class="navbar-brand d-block d-sm-none">Grzegorz Gieda</div>
-
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  			</button>
-
-  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-  				<ul class="navbar-nav mr-auto w-100 justify-content-end">
-
-  					<li class="nav-item">
-
-  						<a id="start" class="nav-link aktywny">Start</a>
-
-  					</li>
-
-  					<li class="nav-item">
-
-  						<a id="o_mnie" class="nav-link">O mnie</a>
-
-  					</li>
-
-  					<li class="nav-item">
-
-  						<a id="umiejetnosci" class="nav-link">Umiejętności</a>
-
-  					</li>
-
-  					<li class="nav-item">
-
-  						<a id="portfolio" class="nav-link">Portfolio</a>
-
-  					</li>
-
-  					<li class="nav-item">
-
-  						<a id="kontakt" class="nav-link">Kontakt</a>
-
-  					</li>
-
-  				</ul>
-
-  			</div>
-
-		</nav>
-
-    <!-- TREŚĆ STRONY (UMIEJĘTNOŚCI)-->
-
-		<div class="container-fluid content umiejetnosci_content ukryty">
-
-			<div class="row">
-
-				<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12 d-none d-sm-block left_content">
-
-					<div class="tech_kont follow-scroll">
-
-						<div class="d-flex justify-content-center">
-
-							<h3>Technologie</h3>
-
-						</div>
-
-						<div class="d-flex justify-content-center">
-
-							<img src="img/logo/html_log.png" class="tech_button" id="html_button">
-							<img src="img/logo/css3_log.png" class="tech_button" id="css3_button">
-							<img src="img/logo/js_log.png" class="tech_button" id="js_button">
-
-						</div>
-
-						<div class="d-flex justify-content-center icons">
-
-							<img src="img/logo/sql_log.png" class="tech_button" id="sql_button">
-							<img src="img/logo/php_log.png" class="tech_button" id="php_button">
-							<img src="img/logo/python_log.png" class="tech_button borderless_button" id="python_button">
-
-						</div>
-
-						<div class="d-flex justify-content-center">
-
-							<h3>Wykształcenie</h3>
-
-						</div>
-
-						<div class="d-flex justify-content-center">
-
-							<img src="img/logo/wykszt_log.png" class="tech_button borderless_button" id="szkola_button">
-
-						</div>
-
-						<div class="d-flex justify-content-center">
-
-							<h3>Doświadczenie</h3>
-
-						</div>
-
-						<div class="d-flex justify-content-center">
-
-							<img src="img/logo/exp_log.png" class="tech_button borderless_button" id="praca_button">
-
-						</div>
-
-					</div>
-
+			<!-- PYTHON opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/python_log.png' %}" class="borderless_button">
 				</div>
-
-				<div class="col-xl-9 col-lg-8 col-md-7 col-sm-6 col-12 right_content">
-
-					<h3 id="html_button_navig">HTML</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>Z językiem HTML pierwszy raz miałem okazję spotkać się podczas rocznego studium podyplomowego w ramach krótkiego bloku przedmiotowego dotyczącego projektowania serwisów www.</p>
-
-					<p>Odczułem wtedy ogromny niedosyt, więc po zakończonej nauce na uczelni po kilkumiesięcznej przerwie powróciłem do tematu podejmując się intensywnego kursu web developingu.</p>
-
-					<p>Swoje umiejętności w tym zakresie oceniam dobrze. Staram się aby kod zawsze był czytelny i przejrzysty a zawartość strony dostosowana do rozdzielczości wyświetlającego ją urządzenia.</p>
-
-					<p>W razie potrzeby wspieram się korzystając z biblioteki Bootstrap'a.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-							<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%">HTML</div>
-						</div>
-
+				<!-- Progress bar -->
+				<div class="d-flex justify-content-center">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+						<div class="progress-bar bg-dark nocursor" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 20%">Python</div>
 					</div>
-
-					<hr>
-
-					<h3 id="css3_button_navig">CSS</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>Nie wyobrażam sobie strony internetowej bez odpowiedniej szaty graficznej. Zdolność tworzenia arkuszy stylów wzrastała u mnie wprost proporcjonalnie do umiejętności pisania kodu HTML, dlatego też jej wartość określam na podobnym poziomie. Swobodnie i bez większych problemów poruszam się między ramkami, marginesami i barwami tła.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-
-							<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%">CSS</div>
-
-						</div>
-
-					</div>
-
-					<hr>
-
-					<h3 id="js_button_navig">JS</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>Nauka języka JavaScript jest dla mnie przyjemnym wyzwaniem. W całości pomaga mi wcześniejsze poznanie Python'a. Teraz kwestią czasu jest jedynie nauczenie się nowej składni. Ułatwiam sobie życie wykorzystując bibliotekę jQuery. Bogactwo dostępnych funkcji jeszcze mnie nieco przytłacza, więc nie mogę powiedzieć, że już dobrze i swobodnie czuję się tworząc nowe skrypty do projektowanych stron. Mimo wszystko metodą prób i błędów osiągam założony cel.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-
-							<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
-
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%">JS</div>
-
-						</div>
-
-					</div>
-
-					<hr>
-
-					<h3 id="sql_button_navig">SQL</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>O bazy danych w chwili obecnej jedynie delikatnie zahaczyłem. Poczytalem nieco o podstawowej składni i funkcjach. Już teraz jednak wiem, że po rozpoczęciu właściwej nauki radośnie w niej utonę. Umieszczanie wszystkiego na listach i w tabelach od zawsze było moim ulubionym zajęciem.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-
-							<div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
-
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 90%">SQL</div>
-
-						</div>
-
-					</div>
-
-					<hr>
-
-					<h3 id="php_button_navig">PHP</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>Zgłębianie tajników PHP pozostawiam sobie na późniejszy etap rozwoju umiejętności programisty. Najpewniej równolegle z nauką SQL'a.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-
-							<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
-
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 99%">PHP</div>
-
-						</div>
-
-					</div>
-
-					<hr>
-
-					<h3 id="python_button_navig">PYTHON</h3>
-
-					<p>(12.09.2018)</p>
-
-					<p>Pierwszy język programowania z jakim kiedykolwiek się zetknąłem. Godziny przesiedziane nad funkcjami, pętlami i instrukcjami warunkowymi przyniosły efekty. Delikatną konsternację wciąż sprawia mi programowanie obiektowe, jednak zakładam, że wszystko jest kwestią wprawy i praktyki.</p>
-
-					<p>Na dalszym etapie rozwoju planuję zainteresować się tematyką BigData, oraz frameworkiem Django.</p>
-
-					<div class="d-flex justify-content-center">
-
-						<div class="progress">
-							<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-							<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 20%">Python</div>
-						</div>
-
-					</div>
-
-					<hr>
-
-					<h2 id="szkola_button_navig">Wykształcenie</h2>
-
-					<ul>
-
-						<li>
-							<h5>Codestars</h5>
-							<div class="data">2018</div>
-							<p class="par_cv">Web Developer Course</p>
-						</li>
-
-						<li>
-							<h5>Zachodniopomorski Uniwersytet Technologiczny</h5>
-							<div class="data">2017-2018</div>
-							<p class="par_cv">Programowanie komputerów</p>
-						</li>
-
-						<li>
-							<h5>Uniwersytet Szczeciński</h5>
-							<div class="data">2006-2011</div>
-							<p class="par_cv">Pedagogika pracy socjalnej i resocjalizacyjna</p>
-						</li>
-
-						<li>
-							<h5>Język angielski</h5>
-							<div class="data">2005</div>
-							<p class="par_cv">Level B2 - w zupełności wystarczający do komunikacji i swobodnego studiowania dokumentacji</p>
-						</li>
-
-					</ul>
-
-					<hr>
-
-					<h2 id="praca_button_navig">Doświadczenie zawodowe</h2>
-
-					<ul>
-
-						<li>
-							<h5>GLS Logistics Polska / Spedimex Szczecin</h5>
-							<div class="data">2014-2018</div>
-							<p class="par_cv">Kierowca zawodowy</p>
-						</li>
-
-						<li>
-							<h5>Miejski Ośrodek Pomocy Rodzinie w Szczecinie</h5>
-							<div class="data">2010</div>
-							<p class="par_cv">Koordynacja i nadzór realizacji autorskiego projektu dot. organizacji zajęć z bajkoterapii w celu zmniejszenia zagrożenia wykluczeniem społecznym dzieci uczęszczających do świetlic środowiskowych</p>
-						</li>
-
-						<li>
-							<h5>ZZTKKF Szczecin</h5>
-							<div class="data">2009-2012</div>
-							<p class="par_cv">Wychowawca kolonijny</p>
-						</li>
-
-						<li>
-							<h5>Caritas Szczecin</h5>
-							<div class="data">2009</div>
-							<p class="par_cv">Wychowawca w świetlicy środowiskowej</p>
-						</li>
-
-					</ul>
-
 				</div>
-
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<p>Pierwszy język programowania z jakim kiedykolwiek się zetknąłem. Godziny przesiedziane nad funkcjami, pętlami i instrukcjami warunkowymi przyniosły efekty. Delikatną konsternację wciąż sprawia mi programowanie obiektowe, jednak zakładam, że wszystko jest kwestią wprawy i praktyki.</p>
+						<p>Na dalszym etapie rozwoju planuję zainteresować się tematyką BigData, oraz frameworkiem Django.</p>
+					</div>
+				</div>
 			</div>
 
+			<!-- JS opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/js_log.png' %}" class="borderless_button">
+				</div>
+				<!-- Progress bar -->
+				<div class="d-flex justify-content-center">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+						<div class="progress-bar bg-dark nocursor" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 80%">JS</div>
+					</div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<p>Nauka języka JavaScript jest dla mnie przyjemnym wyzwaniem. W całości pomaga mi wcześniejsze poznanie Python'a. Teraz kwestią czasu jest jedynie nauczenie się nowej składni. Ułatwiam sobie życie wykorzystując bibliotekę jQuery. Bogactwo dostępnych funkcji jeszcze mnie nieco przytłacza, więc nie mogę powiedzieć, że już dobrze i swobodnie czuję się tworząc nowe skrypty do projektowanych stron. Mimo wszystko metodą prób i błędów osiągam założony cel.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- BOTTOM BAR -->
-
-		<div class="container-fluid" id="bottom_bar">
-
-			<div class="row">
-
-				<div class="col-10 col-sm-11 d-none d-sm-block" id="copyright">
-
-					<div>Copyright&copy; 2018 Grzegorz Gieda</div>
-
+		<div class="row d-flex justify-content-center">
+			<!-- HTML opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/html_log.png' %}" class="borderless_button">
 				</div>
-
-				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Copyright&copy; 2018</div>
-
-				<div class="col-2 col-sm-1">
-
-					<a href="https://github.com/GregorySeth" target="_blank"><img src="img/logo/github_log.png" id="gitlogo"></a>
-
+				<!-- Progress bar -->
+				<div class="d-flex justify-content-center">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<div class="progress-bar bg-dark nocursor" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%">HTML</div>
+					</div>
 				</div>
-
-				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Grzegorz Gieda</div>
-
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<p>Z językiem HTML pierwszy raz miałem okazję spotkać się podczas rocznego studium podyplomowego w ramach krótkiego bloku przedmiotowego dotyczącego projektowania serwisów www.</p>
+						<p>Odczułem wtedy ogromny niedosyt, więc po zakończonej nauce na uczelni po kilkumiesięcznej przerwie powróciłem do tematu podejmując się intensywnego kursu web developingu.</p>
+						<p>Swoje umiejętności w tym zakresie oceniam dobrze. Staram się aby kod zawsze był czytelny i przejrzysty a zawartość strony dostosowana do rozdzielczości wyświetlającego ją urządzenia.</p>
+						<p>W razie potrzeby wspieram się korzystając z biblioteki Bootstrap'a.</p>
+					</div>
+				</div>
 			</div>
 
+			<!-- CSS opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/css3_log.png' %}" class="borderless_button">
+				</div>
+				<!-- Progress bar -->
+				<div class="d-flex justify-content-center">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<div class="progress-bar bg-dark nocursor" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%">CSS</div>
+					</div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<p>Nie wyobrażam sobie strony internetowej bez odpowiedniej szaty graficznej. Zdolność tworzenia arkuszy stylów wzrastała u mnie wprost proporcjonalnie do umiejętności pisania kodu HTML, dlatego też jej wartość określam na podobnym poziomie. Swobodnie i bez większych problemów poruszam się między ramkami, marginesami i barwami tła.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- Optional JavaScript -->
+		<hr>
+
+		<div class="row d-flex justify-content-center">
+			<!-- Wykształcenie opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/wykszt_log.png' %}" class="borderless_button">
+				</div>
+				<div class="d-flex justify-content-center">
+					<h2 class="nocursor">Wykształcenie</h2>
+				</div>
+
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<ul>
+							<li>
+								<h5>Codestars</h5>
+								<div class="data">2018</div>
+								<p class="par_cv">Web Developer Course</p>
+							</li>
+							<li>
+								<h5>Zachodniopomorski Uniwersytet Technologiczny</h5>
+								<div class="data">2017-2018</div>
+								<p class="par_cv">Programowanie komputerów</p>
+							</li>
+							<li>
+								<h5>Uniwersytet Szczeciński</h5>
+								<div class="data">2006-2011</div>
+								<p class="par_cv">Pedagogika pracy socjalnej i resocjalizacyjna</p>
+							</li>
+							<li>
+								<h5>Język angielski</h5>
+								<div class="data">2005</div>
+								<p class="par_cv">Level B2 - w zupełności wystarczający do komunikacji i swobodnego studiowania dokumentacji</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Doświadczenie opis -->
+			<div class="col-sm-12 col-md-5">
+				<div class="d-flex justify-content-center">
+					<img src="{% static 'img/logo/exp_log.png' %}" class="borderless_button">
+				</div>
+				<div class="d-flex justify-content-center">
+					<h2 class="nocursor">Doświadczenie zawodowe</h2>
+				</div>
+
+				<div class="d-flex justify-content-center">
+					<div class="textborder">
+						<ul>
+							<li>
+								<h5>GLS Logistics Polska / Spedimex Szczecin</h5>
+								<div class="data">2014-2018</div>
+								<p class="par_cv">Kierowca zawodowy</p>
+							</li>
+							<li>
+								<h5>Miejski Ośrodek Pomocy Rodzinie w Szczecinie</h5>
+								<div class="data">2010</div>
+								<p class="par_cv">Koordynacja i nadzór realizacji autorskiego projektu dot. organizacji zajęć z bajkoterapii w celu zmniejszenia zagrożenia wykluczeniem społecznym dzieci uczęszczających do świetlic środowiskowych</p>
+							</li>
+							<li>
+								<h5>ZZTKKF Szczecin</h5>
+								<div class="data">2009-2012</div>
+								<p class="par_cv">Wychowawca kolonijny</p>
+							</li>
+							<li>
+								<h5>Caritas Szczecin</h5>
+								<div class="data">2009</div>
+								<p class="par_cv">Wychowawca w świetlicy środowiskowej</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- BOTTOM BAR -->
+	<footer>
+		<div class="d-flex justify-content-center fixed-bottom">
+			<div class="container-fluid" id="bottom_bar">
+				<div class="row">
+					<div class="col-10 col-sm-11 d-none d-sm-block nocursor" id="copyright">
+						<div>Copyright&copy; 2019 Grzegorz Gieda</div>
+					</div>
+					<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center nocursor">Copyright&copy; 2019</div>
+					<div class="col-2 col-sm-1">
+						<a href="https://github.com/GregorySeth" target="_blank"><img src="{% static 'img/logo/github_log.png' %}" id="gitlogo"></a>
+					</div>
+					<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center nocursor">Grzegorz Gieda</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Optional JavaScript -->
 
 
 
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-		<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
 
-		<script src="jquery_ui/jquery-ui.js"></script>
+	<script src="{% static 'jquery_ui/jquery-ui.js' %}"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-		<script src="js/bootstrap.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-		<script type="text/javascript" src="script.js"></script>
+	<!-- <script type="text/javascript" src="{% static 'script.js' %}"></script> -->
 
-	</body>
+</body>
 
 </html>

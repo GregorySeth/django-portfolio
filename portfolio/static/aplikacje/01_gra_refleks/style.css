@@ -1,0 +1,70 @@
+body {
+
+	background-color: #501E00;
+
+}
+
+#poleGry {
+
+	max-width: 800px;
+	margin: auto;
+
+}
+
+#licznikGracza {
+
+	font-weight: bold;
+	margin-top: 15px;
+
+}
+
+#poleInstrukcja {
+
+	height: 114px;
+	width: 774px;
+	background-color: #9F5529;
+	padding-left: 20px;
+	border: 3px solid black;
+	border-bottom: none !important;
+	line-height: 80%;
+
+}
+
+#poleAkcja {
+
+	background-color: #C67D52;
+	border: 3px solid black;
+	width: 754px;
+	height: 654px;
+	padding: 20px;
+
+}
+
+#figura {
+
+	display: none;
+	background-color: red;
+	height: 100px; 
+	width: 100px;
+	border: 3px solid black;
+	border-radius: 0%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+
+}
+
+#guzik {
+
+	font-size: 30px;
+	margin-top: 10px;
+	margin-left: 350px;
+
+}
+
+#tytul {
+
+	font-weight: bold;
+	font-size: 25px;
+
+}

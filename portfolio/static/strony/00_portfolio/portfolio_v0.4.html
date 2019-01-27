@@ -1,0 +1,796 @@
+<!doctype html>
+
+<html lang="en">
+	
+	<head>
+
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<link href="jquery_ui/jquery-ui.css" rel="stylesheet">
+		
+		<title>Gregory Seth - main page</title>
+
+		<style type="text/css">
+		
+		html, body {
+
+			height: 100%;
+
+		}
+
+		body {
+
+			margin: 10px;
+			padding: 0px;
+			background-color: #202020;
+
+
+		}
+
+		#navbar_custom {
+
+			min-height: 70px;
+			background-color: #050200;
+			border-bottom: 2px solid #FF7F00;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			
+		}
+
+		.navbar-toggler {
+
+			background-color: #D56A00;
+
+		}
+
+		.navbar-toggler:focus, .navbar-toggler:active {
+
+    		outline-color: #FF9A37;
+    		box-shadow: none;
+
+  		}
+
+		#logo {
+
+			font-family: Tahoma;
+			font-size: 200%;
+			font-weight: bold;
+			color: #FF9A37;
+
+		}
+
+		#logo:hover {
+
+			cursor: default;
+
+		}
+
+		#logo_sm {
+
+			font-family: Tahoma;
+			font-size: 150%;
+			font-weight: bold;
+			color: #FF9A37;
+
+		}
+
+		#logo_sm:hover {
+
+			cursor: default;
+
+		}
+
+		#navbarSupportedContent a {
+
+    		font-family: Georgia;
+    		font-weight: bold;
+    		color: #FF9A37;
+    		border-radius: 10px;
+    		padding: 10px;
+
+		}
+
+		.nav-item {
+
+			margin-left: 20px;
+
+		}
+
+		.content {
+
+			margin-top: 70px;
+			padding-top: 30px;
+			min-height: 100%;
+			overflow: hidden;	
+			color: #738990;	
+
+		}
+
+		.content h1, h2, h3 {
+
+			color: #FF9A37;
+
+		}
+
+		.left_content {
+
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+			border-right: 1px dotted #FF9A37;
+
+
+		}
+
+		.right_content {
+
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+			padding-top: 50px;
+
+		}
+
+		#bottom_bar {
+
+			border-top: 1px solid #FF7F00;
+			border-bottom: 1px solid #FF7F00;
+			height: 40px;
+			background-color: #050200;
+			z-index: 1;
+			color: #FF7F00;
+
+		}
+
+		.ukryty {
+
+			display: none;
+
+		}
+
+		.aktywny {
+
+			color: black !important;
+			background-color: #FF7F00;
+			cursor: pointer;
+
+		}
+
+		.podswietlony {
+
+			color: #050200 !important;
+    		background-color: #FF9A37;
+    		cursor: pointer;
+
+		}
+
+		#gitlogo {
+
+			width: 30px;
+			height: 30px;
+			margin-top: 4px;
+
+		}
+
+		#copyright {
+
+			padding-top: 5px;
+
+		}
+
+		.copyright_sm {
+
+			padding-top: 10px;
+			font-size: 60%;
+
+		}
+
+		.profil {
+
+			width: 200px;
+			height: 200px;
+			border: 2px solid #FF9A37;
+			border-radius: 20px;
+			margin-bottom: 30px;
+
+		}
+
+		.przycisk {
+
+			float: left;
+			border: 2px solid #FF9A37;
+			margin: 30px 10px 0px 0px;
+			padding-left: 5px;
+			padding-right: 5px;
+			color: #FF9A37;
+			font-weight: bold;
+			font-size: 130%;
+
+		}
+
+		.przycisk a {
+
+			color: #FF9A37;
+			text-decoration: none;
+
+		}
+
+		.przycisk:hover {
+
+			color: #050200;
+    		background-color: #FF9A37;
+    		cursor: pointer;
+
+		}
+
+		.przycisk a:hover {
+
+			color: #050200;
+    		background-color: #FF9A37;
+    		cursor: pointer;
+
+		}
+
+		td {
+
+			padding-right: 30px;
+
+		}
+
+		td a {
+
+			text-decoration: none;
+			color: #738990;
+
+		}
+
+		td a:hover {
+
+			color: #FF9A37;
+
+		}
+
+		table {
+
+			margin-bottom: 20px;
+
+		}
+
+
+	</style>
+
+	</head>
+
+	<body>
+
+		<nav id="navbar_custom" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  
+			<div id="logo" class="navbar-brand d-none d-sm-block">Grzegorz Gieda</div>
+
+			<div id="logo_sm" class="navbar-brand d-block d-sm-none">Grzegorz Gieda</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  				<ul class="navbar-nav mr-auto w-100 justify-content-end">
+
+  					<li class="nav-item">
+
+  						<a id="start" class="nav-link aktywny">Start</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="o_mnie" class="nav-link">O mnie</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="umiejetnosci" class="nav-link">Umiejętności</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="portfolio" class="nav-link">Portfolio</a>
+
+  					</li>
+
+  					<li class="nav-item">
+
+  						<a id="kontakt" class="nav-link">Kontakt</a>
+
+  					</li>
+
+  				</ul>
+
+  			</div>
+
+		</nav>
+		
+		<div class="container-fluid start_content content">
+
+			<div class="row">
+				
+				<div class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-12 d-none d-sm-block left_content">
+					
+					<div class="d-flex justify-content-center"><img src="img/profil.jpg" class="profil"></div>
+
+				</div>
+
+				<div class="col-xl-9 col-lg-9 col-md-8 col-sm-7 col-12 right_content align-self-center">
+
+					<div class="d-flex justify-content-center d-block d-sm-none"><img src="img/profil.jpg" class="profil"></div>
+
+					<h2 class="d-none d-sm-block">Grzegorz Gieda</h2>
+					
+					<p>Młody programista z zapałem wkraczający w dynamiczny świat IT.</p>
+
+					<p>Człowiek ambitny i z uporem dążący do celu.</p>
+
+					<div class="przycisk"><a href="cv/cv.pdf" target="_blank">Pobierz CV</a></div>
+					<div class="przycisk"><a href="mailto:grzegorzgieda@gmail.com">Napisz do mnie</a></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid content o_mnie_content ukryty">
+
+			<div class="row">
+				
+				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 d-none d-sm-block left_content">
+					
+					<div class="d-flex justify-content-center"><img src="img/o_mnie.jpg" class="profil"></div>
+
+				</div>
+
+				<div class="col-xl-10 col-lg-9 col-md-8 col-sm-7 col-12 right_content">
+
+					<div class="d-flex justify-content-center d-block d-sm-none"><img src="img/o_mnie.jpg" class="profil"></div>
+
+					<h2 class="d-none d-sm-block">Witam serdecznie</h2>
+					
+					<p>Programowaniem i projektowaniem stron internetowych zainteresowałem się całkiem niedawno. Temat jednak wciągnął mnie bardzo szybko. Wcześniejsze wykształcenie szybko uzupełniłem studium podyplomowym z programowania komputerów. Tam też glownie zgłębiałem tajniki języka Python. Po zakończeniu nauki na uczelni z wynikiem bardzo dobrym nie marnując czasu rozpocząłem samodzielne kształcenie się z zakresu kodowania stron internetowych. W chwili obecnej posiadam podstawową wiedzę dotyczącą HTML'a i CSS'a, którą uzupełniam umiejętnością pisania skryptów w JavaScript przy pomocy biblioteki jQuery. Jak możesz zaobserwować na przykładzie mojej strony nie jest mi także obce pojęcie responsywności. Pomaga mi w tym wiedza zdobyta po lekturze dokumentacji Bootstrap'a, do której wciąż w razie potrzeby powracam. Na dalszym etapie rozwoju planuję zainteresować się bazami danych SQL, oraz wzmocnić swój backend poprzez opanowanie języka PHP.</p>
+
+					<p></p>
+
+					<h3>Dane podstawowe</h3>
+
+<!-- 					<div class="col-6">
+						
+						<table>
+							
+							<tr>
+	    						<th>Imię:</th>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<td>Grzegorz</td>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<th>Data urodzenia:</th>
+	  						</tr>
+	  
+	  						<tr>
+	    						<td>21.06.1987</td>
+	  						</tr>
+	  
+	  						<tr>
+	    						<th>Email:</th>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<td><a href="mailto:grzegorzgieda@gmail.com">grzegorzgieda@gmail.com</a></td>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<th>Strona domowa:</th>
+	  						</tr>
+
+	  						<tr>
+	    						<td></td>
+	  						</tr>
+
+						</table>
+
+					</div>
+
+					<div class="col-6">
+						
+						<table>
+							
+							<tr>
+	    						<th>Nazwisko:</th>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<td>Gieda</td>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<th>Miejsce zamieszkania:</th>
+	  						</tr>
+	  
+	  						<tr>
+	    						<td>Szczecin</td>
+	  						</tr>
+	  
+	  						<tr>
+	    						<th>Telefon:</th>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<td><a href="tel:+48504566226">504566226</td>
+	  						</tr>
+	  						
+	  						<tr>
+	    						<th>GitHub:</th>
+	  						</tr>
+
+	  						<tr>
+	    						<td><a href="https://github.com/GregorySeth">github.com/GregorySeth</a></td>
+	  						</tr>
+
+						</table>
+
+					</div> -->
+
+					<table class="d-none d-sm-block">
+						<tr>
+    						<th>Imię:</th>
+    						<th>Nazwisko:</th>
+  						</tr>
+  						
+  						<tr>
+    						<td>Grzegorz</td>
+    						<td>Gieda</td>
+  						</tr>
+  						
+  						<tr>
+    						<th>Data urodzenia:</th>
+    						<th>Miejsce zamieszkania:</th>
+  						</tr>
+  
+  						<tr>
+    						<td>21.06.1987</td>
+    						<td>Szczecin</td>
+  						</tr>
+  
+  						<tr>
+    						<th>Email:</th>
+    						<th>Telefon:</th>
+  						</tr>
+  						
+  						<tr>
+    						<td><a href="mailto:grzegorzgieda@gmail.com">grzegorzgieda@gmail.com</a></td>
+    						<td><a href="tel:+48504566226">504566226</td>
+  						</tr>
+  						
+  						<tr>
+    						<th>Strona domowa:</th>
+    						<th>GitHub:</th>
+  						</tr>
+
+  						<tr>
+    						<td></td>
+    						<td><a href="https://github.com/GregorySeth">github.com/GregorySeth</a></td>
+  						</tr>
+					
+					</table>
+
+					<table class="d-block d-sm-none">
+						<tr>
+    						<th>Imię:</th>
+  						</tr>
+  						
+  						<tr>
+    						<td>Grzegorz</td>
+    					</tr>
+
+    					<tr>
+    						<th>Nazwisko:</th>
+    					</tr>
+
+    					<tr>
+    						<td>Gieda</td>
+  						</tr>
+
+  						<tr>
+    						<th>Data urodzenia:</th>
+    					</tr>
+
+    					<tr>
+    						<td>21.06.1987</td>
+  						</tr>
+
+  						<tr>
+    						<th>Miejsce zamieszkania:</th>
+    					</tr>
+
+    					<tr>
+    						<td>Szczecin</td>
+  						</tr>
+
+  						<tr>
+    						<th>Email:</th>
+    					</tr>
+
+    					<tr>
+    						<td><a href="mailto:grzegorzgieda@gmail.com">grzegorzgieda@gmail.com</a></td>
+  						</tr>
+
+  						<tr>
+    						<th>Telefon:</th>
+    					</tr>
+
+    					<tr>
+    						<td><a href="tel:+48504566226">504566226</a></td>
+  						</tr>
+  						
+  						<tr>
+    						<th>Strona domowa:</th>
+    					</tr>
+
+    					<tr>
+    						<td>Moja strona</td>
+  						</tr>
+  						 
+  						<tr>
+    						<th>GitHub:</th>
+    					</tr>
+  						
+  						<tr>
+    						<td><a href="https://github.com/GregorySeth">github.com/GregorySeth</a></td>
+  						</tr>
+  											
+					</table>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid content umiejetnosci_content ukryty">
+
+			<div class="row">
+				
+				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 d-none d-sm-block left_content">
+					
+					<h2>Umiejetności</h2>
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+				<div class="col-xl-10 col-lg-9 col-md-8 col-sm-7 col-12 right_content">
+
+					<h2>Umiejętności</h2>
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid content portfolio_content ukryty">
+
+			<div class="row">
+				
+				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 d-none d-sm-block left_content">
+					
+					<h2>Portfolio</h2>
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+				<div class="col-xl-10 col-lg-9 col-md-8 col-sm-7 col-12 right_content">
+
+					<h2>Portfolio</h2>
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid content kontakt_content ukryty">
+
+			<div class="row">
+				
+				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 d-none d-sm-block left_content">
+					
+					<h2>Kontakt</h2>
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+				<div class="col-xl-10 col-lg-9 col-md-8 col-sm-7 col-12 right_content">
+
+					<h2>Kontakt</h2>
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<div class="container-fluid" id="bottom_bar">
+
+			<div class="row">
+
+				<div class="col-10 col-sm-11 d-none d-sm-block" id="copyright">
+									
+					<div>Copyright&copy; 2018 Grzegorz Gieda</div>
+								
+				</div>
+
+				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Copyright&copy; 2018</div>
+
+				<div class="col-2 col-sm-1">
+
+					<a href="https://github.com/GregorySeth" target="_blank"><img src="img/github2.png" id="gitlogo"></a>
+
+				</div>
+
+				<div class="col-5 d-block d-sm-none copyright_sm d-flex justify-content-center">Grzegorz Gieda</div>				
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+	    
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script src="jquery_ui/jquery-ui.js"></script>
+	    
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    
+		<script src="js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			
+			// Wysokość content
+
+			function okno_size() {
+				
+				$("body").height($(window).height() - $("#navbar_custom").height() - $("#bottom_bar").height() - 25);
+
+			}
+
+			// Ukrywanie paneli - funkcja i zachowanie startowe pierwszego przycisku "Start"
+
+			function ukryj_panele() {
+
+				$(".content").addClass("ukryty");
+
+			}
+
+			// Efekt otwierania panelu content
+
+			function show () {
+
+				$(".left_content").stop(false, true);
+
+				$(".right_content").stop(false, true);
+
+				$(".left_content").show("fade", 500);
+
+				$(".right_content").show("fade", 1000);
+
+			}
+
+			// Dostosowanie zawartości strony do rozmiaru okna po jej pierwszym otwarciu
+
+			okno_size();
+
+			// Reakcja strony na każdą zmianę rozmiaru okna
+
+			$(window).resize(okno_size);
+
+			// Przyciski w navbarze - podświetlenie i kursor
+
+			$(".nav-link").hover(function() {
+
+				$(this).addClass("podswietlony");
+
+			}, function() {
+
+				$(this).removeClass("podswietlony");
+
+			});
+
+			$(".start_content").removeClass("ukryty");
+
+			// Przyciski navbara - aktywacja
+
+			$(".nav-link").click(function() {
+
+				// Zmiana koloru przycisków navbara
+
+				$(".nav-link").removeClass("aktywny");
+
+				$(this).toggleClass("aktywny");
+
+				$(this).removeClass("podswietlony");
+
+				// Otwarcie wybranego panelu
+
+				var content_id = $(this).attr("id") + "_content";
+
+				ukryj_panele();
+
+				show();
+
+				$("." + content_id).removeClass("ukryty");			
+
+			});
+
+		</script>
+  	
+	</body>
+
+</html>

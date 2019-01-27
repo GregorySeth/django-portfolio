@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<title>Refleks</title>
+
+	</head>
+
+	<body>
+
+		<div id="poleGry">
+			
+			<div id="poleInstrukcja">
+
+				<p id="tytul">Sprawdź swój refleks!</p>
+
+				Masz 10 prób. Klikaj w pojawiające się figury tak szybko jak tylko zdołasz! 
+
+				<div id="licznikGracza">Twój czas: <span id="liczba"></span></div>
+
+			</div>
+
+			<div id="poleAkcja">
+				
+				<div id="figura" onclick="kill()"></div>
+
+			</div>
+
+			<button id="guzik" onclick="reset()">Reset</button>
+
+		</div>
+
+		<script type="text/javascript" src="script.js"></script>
+
+	</body>
+
+</html>

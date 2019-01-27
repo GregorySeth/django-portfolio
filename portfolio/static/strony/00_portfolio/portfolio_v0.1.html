@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html lang="en">
+	
+	<head>
+
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<link href="jquery_ui/jquery-ui.css" rel="stylesheet">
+		
+		<title>Gregory Seth - main page</title>
+
+		<style type="text/css">
+		
+		html, body {
+
+			height: 100%;
+
+		}
+
+		body {
+
+			margin: 0px;
+			padding: 0px;
+			background-color: orange;
+
+		}
+
+		#top_bar {
+
+			position: fixed;
+			top: 0px;
+			height: 70px;
+			background-color: green;
+			z-index: 1;
+			border: 1px solid red;
+
+		}
+
+		#top_bar_logo {
+
+			float: left;
+			width: 10%;
+
+		}
+
+		#top_bar_buttons_container {
+
+			float: right;
+
+		}
+
+		.top_bar_item {
+
+			float: left;
+			height: 10px;
+			background-color: red;
+
+		}
+
+		#content {
+
+			/*background-color: #781300;*/
+			margin-top: 70px;
+			border: 3px solid yellow;
+			min-height: 100%;
+			overflow: hidden;
+
+		}
+
+		#left_content {
+
+			border: 1px solid green;
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+
+		}
+
+		#right_content {
+
+			color: blue;
+			font-weight: bold;
+			border: solid pink 1px;
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+
+		}
+
+		#bottom_bar {
+
+			border: 1px solid red;
+			bottom: 0px;
+			height: 70px;
+			/*background-color: green;*/
+			z-index: 1;
+
+		}
+
+
+	</style>
+
+	</head>
+
+	<body>
+
+		<!-- topbar przerobić na navbar! -->
+
+
+
+		<div class="container-fluid" id="top_bar">
+
+			<div class="row">
+
+				<div class="col-3">
+
+					<div class="top_bar_logo">logo</div>
+
+				</div>
+
+				<div class="col-6"></div>
+
+				<div class="col-3" id="top_bar_buttons_container">
+					
+					<div class="top_bar_item">O mnie</div>
+				
+					<div class="top_bar_item">Umiejętności</div>
+				
+					<div class="top_bar_item">Portfolio</div>
+				
+					<div class="top_bar_item">kontakt</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="container-fluid" id="content">
+
+			<div class="row">
+				
+				<div class="col-4" id="left_content">
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+				<div class="col-8" id="right_content">
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<div class="container-fluid" id="bottom_bar">
+
+			<div class="row">
+
+				<div class="col-3">
+
+					git
+
+				</div>
+
+				<div class="col-5"></div>
+
+				<div class="col-4">
+					
+					copyright
+				
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+	    
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script src="jquery_ui/jquery-ui.js"></script>
+	    
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    
+		<script src="js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			
+			// Wysokość
+
+			function okno_size() {
+				
+				$("body").height($(window).height() - $("#top_bar").height() - $("#bottom_bar").height());
+
+			}
+
+			okno_size();
+
+			$(window).resize(okno_size);
+
+		</script>
+  	
+	</body>
+
+</html>

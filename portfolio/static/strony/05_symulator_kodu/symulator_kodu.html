@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Symulator kodu</title>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script src="jquery_ui/jquery-ui.js"></script>
+
+		<link href="jquery_ui/jquery-ui.css" rel="stylesheet">
+
+
+		<style type="text/css">
+			
+			html, body {
+
+				margin: 0px;
+
+			}
+
+			#top_kontener {
+
+				height: 50px;
+				background-color: #EDEDED;
+				min-width: 750px;
+				padding: 15px 0px 0px 15px;			
+
+			}
+
+			#przyciski_kontener {
+
+				width: 316px;
+				margin: 0px auto;
+
+			}
+
+			#nazwa_programu {
+
+				float: left;
+				font-weight: bold;
+				font-size: 150%;
+				font-family: Tahoma, Geneva, sans-serif;
+				padding: 3px 5px;
+
+			}
+
+			.guzik {
+
+				float: left;
+				border: 1px solid #7F7F7F;
+				border-left: none;
+				font-size: 20px;
+				font-family: Tahoma, Geneva, sans-serif;
+				padding: 4px 10px;
+				outline: none;
+				cursor: pointer;
+
+			}
+
+			#html {
+
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border-left: 1px solid #7F7F7F;
+
+			}
+
+			#wynik {
+
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+
+			}
+
+			.panel {
+
+				float: left;
+				width: 50%;
+				border-left: none;
+
+			}
+
+			.aktywny {
+
+				background-color: #E8F2FF;
+
+			}
+
+			.podswietlony {
+
+				background-color: #E4E4E4;
+
+			}
+
+			textarea {
+
+				width: 50%;
+				resize: none;
+				border-top: none;
+				border-color: grey;
+
+			}
+
+			iframe {
+
+				border: none;
+
+			}
+
+			.ukryty {
+
+				display: none;
+
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="top_kontener">
+
+			<div id="nazwa_programu">
+
+				Symulator kodu
+
+			</div>
+
+			<div id="przyciski_kontener">
+				
+				<div class="guzik aktywny" id="html">HTML</div>
+				<div class="guzik" id="css">CSS</div>
+				<div class="guzik" id="js">JavaScript</div>
+				<div class="guzik aktywny" id="wynik">Wynik</div>
+
+			</div>
+
+		</div>
+
+		<div id="bottom_kontener">
+
+			<textarea id="html_panel" class="panel">&lt;h1&gt;Witaj w prostym symulatorze kodu&lt;&sol;h1&gt;&NewLine;&lt;p id&equals; "zielony"&gt;Możesz dzięki niemu pisać kod&lt;&sol;p&gt;&NewLine;&lt;p id&equals; "czerwony"&gt;i na bieżąco kontrolować&lt;&sol;p&gt;&NewLine;&lt;p id&equals; "niebieski"&gt;zmiany jakie w nim zachodzą&lt;&sol;p&gt;</textarea>
+			<textarea id="css_panel" class="panel ukryty">&num;zielony &lcub;color: green; font-weight: bold;&rcub;&NewLine;&num;czerwony &lcub; color: red; font-size: 150%&rcub;&NewLine;&num;niebieski &lcub; color: blue; text-decoration: underline;&rcub;</textarea>
+			<textarea id="js_panel" class="panel ukryty"></textarea>
+			<iframe id="wynik_panel" class="panel"></iframe>
+
+		</div>
+
+		<script type="text/javascript">
+
+			function aktualizuj_wynik() {
+
+				$("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#css_panel").val() + "</style></head><body>" + $("#html_panel").val() + "</body></html>");
+
+				document.getElementById("wynik_panel").contentWindow.eval($("#js_panel").val());
+
+			}
+
+			$(".guzik").hover(function() {
+
+				$(this).addClass("podswietlony");
+
+			}, function() {
+
+				$(this).removeClass("podswietlony");
+
+			});
+
+			$(".guzik").click(function() {
+
+				$(this).toggleClass("aktywny");
+
+				$(this).removeClass("podswietlony");
+
+				var panel_id = $(this).attr("id") + "_panel";
+
+				$("#" + panel_id).toggleClass("ukryty");
+
+				var ile_paneli = 4 - ($(".ukryty").length);
+
+				$(".panel").width(($(window).width() / ile_paneli) - 10);
+
+				
+
+			});
+
+			$(".panel").height($(window).height() - $("#top_kontener").height() - 21);
+
+			$(".panel").width(($(window).width() / 2) - 5);
+
+			aktualizuj_wynik();
+
+			$("textarea").on('change keyup paste', function() {
+
+				aktualizuj_wynik();
+
+			});
+
+			
+
+			
+
+
+		</script>
+
+	</body>
+
+</html>
