@@ -143,6 +143,6 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
