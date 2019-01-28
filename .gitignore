@@ -13,3 +13,5 @@ db.sqlite3
 /static
 
 # End of https://www.gitignore.io/api/django
+sendgrid.env
+sendgrid.env
