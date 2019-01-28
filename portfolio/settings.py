@@ -141,3 +141,8 @@ EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
