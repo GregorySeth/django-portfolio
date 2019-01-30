@@ -16,7 +16,7 @@ def contact(request):
             topic = request.POST.get('subject', '')
             content = request.POST.get('content', '')
 
-            sg = sendgrid.SendGridAPIClient(apikey='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')
+            sg = sendgrid.SendGridAPIClient(apikey='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')
             from_email = Email(email)
             to_email = Email("grzegorzgieda@gmail.com")
             subject = topic
