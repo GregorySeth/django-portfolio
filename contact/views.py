@@ -4,6 +4,11 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 
+try:
+    from password import *
+except ImportError:
+    pass
+
 # Create your views here.
 def contact(request):
 
@@ -16,9 +21,7 @@ def contact(request):
             topic = request.POST.get('subject', '')
             content = request.POST.get('content', '')
 
-            sg = sendgrid.SendGridAPIClient(apikey='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')
             from_email = Email(email)
-            to_email = Email("grzegorzgieda@gmail.com")
             subject = topic
             content = Content("text/plain", content + "\n\n\n" + name)
             mail = Mail(from_email, subject, to_email, content)
