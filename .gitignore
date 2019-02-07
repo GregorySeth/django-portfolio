@@ -8,6 +8,7 @@
 *.pyc
 __pycache__/
 local_settings.py
+password.py
 db.sqlite3
 /media
 /static
