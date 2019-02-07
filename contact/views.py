@@ -5,7 +5,7 @@ import os
 from sendgrid.helpers.mail import *
 
 try:
-    from password import *
+    from .password import *
 except ImportError:
     pass
 
