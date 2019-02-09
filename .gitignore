@@ -12,6 +12,8 @@ password.py
 db.sqlite3
 /media
 /static
+local_settings.work
+local_settings.proj
 
 # End of https://www.gitignore.io/api/django
 sendgrid.env
