@@ -40,9 +40,11 @@
 			<div class="container">
 				<hr>
 				{% for blog in blogs.all %}
-				<a href="{% url 'blogdetail' blog.id %}"><h3>{{ blog.title }}</h3>
-				<p>({{ blog.edit_pub_date }})</p>
-				<img src="{{ blog.image.url }}" height=150 width=200 /></a> <!-- wystylizuj to! -->
+				<a href="{% url 'blogdetail' blog.id %}" style="text-decoration: none;">
+					<h3>{{ blog.title }}</h3>
+					<p>({{ blog.edit_pub_date }})</p>
+					<img src="{{ blog.image.url }}" height=150 width=200 class="photoborder">
+				</a>
 				<p class="nocursor">{{ blog.summary }} ... <a href="{% url 'blogdetail' blog.id %}">[czytaj dalej]</a></p>
 				<hr>
 				{% endfor %}

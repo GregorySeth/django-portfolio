@@ -33,14 +33,14 @@
 		</div>
 	</nav>
 
-	<!-- TREŚĆ STRONY (PORTFOLIO)-->
+	<!-- TREŚĆ STRONY -->
 
 	<div class="container-fluid content">
 		<div class="d-flex justify-content-center nocursor">
-			<h4>{{ project.name }}</h4>
+			<h2 style="font-weight: bold;">{{ project.name }}</h2>
 		</div>
 		<div class="d-flex justify-content-center">
-			<img src="{{ project.image.url }}" width=600 height=400>
+			<img src="{{ project.image.url }}" width=600 height=400 class="photoborder">
 		</div>
 		<div class="d-flex justify-content-center nocursor">
 			({{ project.tech }})

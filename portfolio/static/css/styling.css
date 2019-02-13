@@ -95,17 +95,8 @@ body {
 
 }
 
-.left_content {
-
-	/* margin-bottom: -9999px;
-	padding-bottom: 9999px; */
-
-}
-
 .right_content {
 
-	/* margin-bottom: -9999px;
-	padding-bottom: 9999px; */
 	border-left: 1px dotted #FF9A37;
 	padding-top: 50px;
 	margin-bottom: 40px;
@@ -152,6 +143,7 @@ body {
 	width: 30px;
 	height: 30px;
 	margin-top: 4px;
+	margin-right: 10px;
 
 }
 
@@ -181,6 +173,7 @@ body {
 .przycisk {
 
 	display: inline-flex;
+	background-color: #202020;
 	border: 2px solid #FF9A37;
 	margin: 30px 10px 0px 0px;
 	padding-left: 10px;
@@ -375,5 +368,13 @@ a:hover {
 .codelink {
 
 	padding-top: 3px;
+
+}
+
+.photoborder {
+
+	border: 2px solid #FF9A37;
+	border-radius: 10px;
+	margin-bottom: 20px;
 
 }

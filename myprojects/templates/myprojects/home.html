@@ -38,10 +38,10 @@
 		<div class="row d-flex justify-content-center">
 
 			{% for project in projects.all %}
-			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-3">
+			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-3" style="margin-bottom: 20px;">
 				<a href="{% url 'projectdetail' project.id %}">
 					<div class="d-flex justify-content-center">
-						<img src="{{ project.image.url }}" width=300 height=200> <!--WYSTYLIZUJ TO! (rozmiar, border, marginy) -->
+						<img src="{{ project.image.url }}" width=300 height=200 class="photoborder">
 					</div>
 					<div class="d-flex justify-content-center">
 						<h4>{{ project.name }}</h4>
